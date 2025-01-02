@@ -1,0 +1,9 @@
+.main_div{
+    border: 2px solid black;
+    height: 100vh;
+}
+
+.left, .right{
+    border: 2px solid;
+    height: inherit;
+}

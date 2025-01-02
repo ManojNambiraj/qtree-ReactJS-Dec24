@@ -1,14 +1,14 @@
 import React from 'react'
-import Routers from './Routers'
+import ShoppingCart from './ShoppingCart';
 
 function App() {
   return (
     <div>
-      <Routers />
+      <ShoppingCart />
 
-
+      {/* <Routers /> */}
     </div>
-  )
+  );
 }
 
 export default App
