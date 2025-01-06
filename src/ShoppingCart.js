@@ -92,6 +92,18 @@ function ShoppingCart() {
   ];
 
   const [cartItems, setCartItems] = useState([]);
+  const [total, setTotal] = useState(0);
+
+  const handleAddToCart = (product) => {
+    setCartItems([...cartItems, product]);
+    setTotal(total + product.price);
+  };
+
+  const handleRemoveFromCart = (product) => {
+    const removedCart = cartItems.filter((cItem) => cItem.id !== product.id);
+    setCartItems(removedCart);
+    setTotal(total - product.price);
+  };
 
   return (
     <div className="container_fluid">
@@ -99,17 +111,27 @@ function ShoppingCart() {
         <div className="col-10">
           <div className="row m-2 d-flex gap-3">
             {data.map((product) => {
-              return <ProductCard product={product} />;
+              return (
+                <ProductCard
+                  product={product}
+                  handleAddToCart={handleAddToCart}
+                />
+              );
             })}
           </div>
         </div>
         <div className="col-2">
           <ol class="list-group list-group-numbered">
-            {
-              cartItems.map((item) => {
-                return <CartItem />
-              })
-            }
+            <h3>Count: {cartItems.length}</h3>
+            {cartItems.map((item) => {
+              return (
+                <CartItem
+                  item={item}
+                  handleRemoveFromCart={handleRemoveFromCart}
+                />
+              );
+            })}
+            <h3>Total: {total}</h3>
           </ol>
         </div>
       </div>

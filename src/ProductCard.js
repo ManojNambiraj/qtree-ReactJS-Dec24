@@ -9,7 +9,11 @@ function ProductCard(props) {
         <h6 class="card-title">{props.product.price}</h6>
         <p class="card-text">{props.product.desc}</p>
         <p>{props.product.isStock === true ? "-in stock" : "-out of stock"}</p>
-        <button class="btn btn-primary" disabled={!props.product.isStock}>
+        <button
+          class="btn btn-primary"
+          disabled={!props.product.isStock}
+          onClick={() => {props.handleAddToCart(props.product)}}
+        >
           Add to cart
         </button>
       </div>

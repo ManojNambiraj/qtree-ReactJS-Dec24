@@ -1,15 +1,22 @@
-import React from 'react'
+import React from "react";
 
-function CartItem() {
+function CartItem(props) {
   return (
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto">
-        <div class="fw-bold">Subheading</div>
-        Content for list item
+        <div class="fw-bold">{props.item.pName}</div>
+        {props.item.price}
       </div>
-      <span class="badge text-bg-primary rounded-pill">14</span>
+      <button
+        class="badge text-bg-primary rounded-pill"
+        onClick={() => {
+          props.handleRemoveFromCart(props.item);
+        }}
+      >
+        X
+      </button>
     </li>
   );
 }
 
-export default CartItem
+export default CartItem;
