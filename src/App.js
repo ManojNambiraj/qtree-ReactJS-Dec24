@@ -1,10 +1,13 @@
 import React from 'react'
 import ShoppingCart from './ShoppingCart';
+import ShoppingCartUseReducer from './ShoppingCartUseReducer';
 
 function App() {
   return (
     <div>
-      <ShoppingCart />
+      <ShoppingCartUseReducer />
+
+      {/* <ShoppingCart /> */}
 
       {/* <Routers /> */}
     </div>
