@@ -1,11 +1,14 @@
 import React from 'react'
-import ShoppingCart from './ShoppingCart';
-import ShoppingCartUseReducer from './ShoppingCartUseReducer';
+// import ShoppingCart from './ShoppingCart';
+// import ShoppingCartUseReducer from './ShoppingCartUseReducer';
+import CRUDApp from './CRUDApp';
 
 function App() {
   return (
     <div>
-      <ShoppingCartUseReducer />
+
+      <CRUDApp />
+      {/* <ShoppingCartUseReducer /> */}
 
       {/* <ShoppingCart /> */}
 
