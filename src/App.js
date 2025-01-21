@@ -8,6 +8,8 @@ function App() {
     <div>
 
       <CRUDApp />
+
+{/*  */}
       {/* <ShoppingCartUseReducer /> */}
 
       {/* <ShoppingCart /> */}
