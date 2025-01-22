@@ -15,3 +15,7 @@ function CRUDApp() {
 }
 
 export default CRUDApp
+
+// CRUD         --> Create Read Update  Delete
+
+// HTTP methods -->  POST   GET   PUT    DELETE
