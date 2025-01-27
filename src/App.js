@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+import ReduxDEMO from "./ReduxDEMO";
 // import ShoppingCart from './ShoppingCart';
 // import ShoppingCartUseReducer from './ShoppingCartUseReducer';
-import CRUDApp from './CRUDApp';
-import ContextAPI from './ContextAPI';
+// import CRUDApp from './CRUDApp';
+// import ContextAPI from './ContextAPI';
+import "./App.css"
 
 function App() {
   return (
-    <div>
-      <ContextAPI />
+    <div className="App">
+      <ReduxDEMO />
+
+      {/* <ContextAPI /> */}
 
       {/* <CRUDApp /> */}
 
@@ -20,4 +24,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
